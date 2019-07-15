@@ -1,3 +1,7 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+    <h1 class="h2">Dashboard</h1>
+</div>
+
 <h2 class="text-center">Current tab: <span style="color:red">{{ selectedTab }}</span></h2>
 <h4>Nav 1</h4>
 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -13,7 +17,7 @@
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab" 
+  <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab"
   [ngClass]="(selectedTab) === 'home' ? ' show active' : ''">
     Home: Et et consectetur ipsum labore excepteur est proident excepteur
   </div>
