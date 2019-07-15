@@ -1,27 +1,27 @@
-<h2>Nav 2 - Child Component</h2>
+<h5>Nav 2 (Child Component)</h5>
 <ul class="nav nav-tabs" id="myTab-2" role="tablist">
     <li class="nav-item">
-      <a class="nav-link" id="home-tab-2" data-toggle="tab" role="tab" aria-controls="home-2" aria-selected="false" [ngClass]="(selectedTab) === 'home' ? ' show active' : ''" (click)="onChangeTab('home')">Home</a>
+      <a class="nav-link" id="home-tab-2" data-toggle="tab" role="tab" aria-controls="home-2" aria-selected="false" [ngClass]="(tab$ | async).selectedTab === 'home' ? ' show active' : ''" (click)="onChangeTab('home')">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile-2" aria-selected="false" [ngClass]="(selectedTab) === 'profile' ? ' show active' : ''" (click)="onChangeTab('profile')">Profile</a>
+      <a class="nav-link" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile-2" aria-selected="false" [ngClass]="(tab$ | async).selectedTab === 'profile' ? ' show active' : ''" (click)="onChangeTab('profile')">Profile</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" role="tab" aria-controls="contact-2" aria-selected="false" [ngClass]="(selectedTab) === 'contact' ? ' show active' : ''" (click)="onChangeTab('contact')">Contact</a>
+      <a class="nav-link" id="contact-tab" data-toggle="tab" role="tab" aria-controls="contact-2" aria-selected="false" [ngClass]="(tab$ | async).selectedTab === 'contact' ? ' show active' : ''" (click)="onChangeTab('contact')">Contact</a>
       <!-- <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a> -->
     </li>
   </ul>
   <div class="tab-content" id="myTabContent-2">
     <div class="tab-pane fade" id="home-2" role="tabpanel" aria-labelledby="home-tab-2"
-    [ngClass]="(selectedTab) === 'home' ? ' show active' : ''">
+    [ngClass]="(tab$ | async).selectedTab === 'home' ? ' show active' : ''">
       Home: Et et consectetur ipsum labore excepteur est proident excepteur
     </div>
     <div class="tab-pane fade" id="profile-2" role="tabpanel" aria-labelledby="profile-tab-2" 
-     [ngClass]="(selectedTab) === 'profile' ? ' show active' : ''">
+     [ngClass]="(tab$ | async).selectedTab === 'profile' ? ' show active' : ''">
       Profile: Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim 
     </div>
     <div class="tab-pane fade" id="contact-2" role="tabpanel" aria-labelledby="contact-tab" 
-    [ngClass]="(selectedTab) === 'contact' ? ' show active' : ''">
+    [ngClass]="(tab$ | async).selectedTab === 'contact' ? ' show active' : ''">
       Contact: Sint sit mollit irure quis est nostrud cillum consequat
     </div>
   </div>

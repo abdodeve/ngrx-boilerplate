@@ -3,5 +3,5 @@
 </div>
 
 <p>
-  You have been selected <span style="color: red"> {{ selectedTab }} </span>
+  You selected: <b style="color: red;"> {{ (tab$ | async).selectedTab  }} </b>
 </p>

@@ -10,14 +10,9 @@ import { tabChangedAction } from '../store/tabs/tabs.actions';
 })
 export class TabsComponent implements OnInit {
   tab$: Observable<any>;
-  selectedTab: string;
-
+  
   constructor( private store: Store< {tab: any} > ) {
     this.tab$ = store.pipe( select('tab') );
-    this.tab$.subscribe(res =>{
-          // console.log(res);
-          this.selectedTab = res.selectedTab ;
-    });
   }
 
   ngOnInit() {

@@ -14,9 +14,6 @@ export class DetailsComponent implements OnInit {
 
   constructor( private store: Store< {tab: any} > ) {
     this.tab$ = store.pipe( select('tab') );
-    this.tab$.subscribe(res =>{
-          this.selectedTab = res.selectedTab ;
-    });
   }
 
   ngOnInit() {
