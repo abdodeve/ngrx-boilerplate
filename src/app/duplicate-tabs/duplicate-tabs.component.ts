@@ -15,7 +15,6 @@ export class DuplicateTabsComponent implements OnInit {
   constructor( private store: Store< {tab: any} > ) {
     this.tab$ = store.pipe( select('tab') );
     this.tab$.subscribe(res =>{
-          console.log(res);
           this.selectedTab = res.selectedTab ;
     });
   }
