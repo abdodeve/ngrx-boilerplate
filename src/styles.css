@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.nav-item a {
+    cursor: pointer;
+}
+
+.nav-item {
+    color: #007bff;
+}

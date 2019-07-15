@@ -1,10 +1,7 @@
-import { createAction } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 
-export const increment = createAction('[Counter1 Component] Increment');
-export const decrement = createAction('[Counter1 Component] Decrement');
-export const reset = createAction('[Counter1 Component] Reset');
-
-/*
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://github.com/ngrx/platform
-*/
+export const increment = createAction('[Counter Component] Increment');
+export const decrement = createAction('[Counter Component] Decrement');
+export const reset = createAction('[Counter Component] Reset');
+export const login = createAction('[Login page] Login', props<{ username: string; 
+password: string }>());
