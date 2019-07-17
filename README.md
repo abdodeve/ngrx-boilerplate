@@ -1,6 +1,9 @@
-# Ngapp1
+# ngrx-boilerplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+This project is a boilerplate for angular+ngrx projects.
+NgRx Store provides reactive state management for Angular apps inspired by Redux. Unify the events in your application and derive state using RxJS.
+
+##### demo url: http://ngrx-boilerplate.abdelhadidev.tk
 
 ## Development server
 
