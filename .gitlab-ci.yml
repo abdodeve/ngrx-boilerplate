@@ -1,0 +1,21 @@
+before_script:
+  - echo "Before script"
+  - pwd
+  - ls
+  - "php -v"
+building:
+  stage: build
+  tags:
+    - runner-for-ngrx-boilerplate
+  script:
+    - rm ./package-lock.json
+    - npm install
+    - ./node_modules/@angular/cli/bin/ng build
+    - cd dist/ngapp1
+    - ls
+    - sshpass -V
+    - sshpass -p $SSH_PASS_CONTABO ssh -o StrictHostKeyChecking=no root@178.238.236.3 "ls
+                                                                                       rm -rf /var/www/html/abdelhadi/ngrx-boilerplate-build;
+                                                                                       ls"
+    - export SSHPASS=$SSH_PASS_CONTABO
+    - sshpass -e scp -o stricthostkeychecking=no -r . root@178.238.236.3:/var/www/html/abdelhadi/ngrx-boilerplate-build
